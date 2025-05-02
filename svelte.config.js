@@ -14,14 +14,14 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			handleMissingId: ({ id, path, message, referrers }) => {
-					console.log('handleMissingId', { id, path, message });
-					return;
+				console.log('handleMissingId', { id, path, message });
+				return;
 			},
 			handleHttpError: ({ message }) => {
-					console.error('handleHttpError', message);
-					return;
+				console.error('handleHttpError', message);
+				return;
 			}
-	},
+		}
 	}
 };
 
