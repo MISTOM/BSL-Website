@@ -8,7 +8,7 @@
 		link_one: '/services',
 		link_two_text: 'Our Process',
 		link_two: '/process',
-		image: '/images/hero.jpg', // Replace with your hero image
+		image: '/heroBg.jpg', // Replace with your hero image
 		full_screen_image: '/images/fullscreen.jpg', // Replace with your full screen image
 		cta_title: 'Transforming Ideas into Digital Reality',
 		cta_description: "We help businesses leverage technology to grow and succeed in today's digital world.",
@@ -16,7 +16,7 @@
 		footer_cta_description: "Let's create something amazing together!",
 		footer_cta_button_text: 'Contact Us Today',
 		footer_cta_button_link: '/contact',
-		footer_cta_image: '/images/footer.jpg' // Replace with your footer image
+		footer_cta_image: '/computerOpen.jpg' // Replace with your footer image
 	};
 
 	// Sample blog posts - replace with your actual data
@@ -79,32 +79,21 @@
 	// Sample categories - replace with your actual data
 	const categories = [
 		{
-			url: '/category/web-development',
+			url: '/#',
 			title: 'Web Development',
-			image: '/images/category1.jpg'
+			image: '/webCode.jpg'
 		},
 		{
-			url: '/category/mobile-apps',
+			url: '/#',
 			title: 'Mobile Apps',
-			image: '/images/category2.jpg'
+			image: '/mobile.jpg'
 		},
 		{
-			url: '/category/cloud-solutions',
+			url: '/#',
 			title: 'Cloud Solutions',
-			image: '/images/category3.jpg'
+			image: '/servers.jpg'
 		}
 	];
-
-	const about = {
-		title: 'WHO WE ARE..',
-		subtitle: 'ABOUT US',
-		description: [
-			'Brisk Solution Company limited (BSL). BSL is a Software Engineering and Development enterprise founded in Kenya. We are focused on proficiency in business processes automation by providing our clients with enterprise software solutions based on Open-Source technologies and excellent industry standards.',
-			'Our emphasis is on improving the quality of decisions made for the business, planning with strategic execution to improve investment returns for our clients.',
-			'BSL strives to become the preferred industry standard for the provision of software solutions that are functional, maintainable, dependable, efficient and that perform to specific requirements.These has involved developing software components and applications for the both desktop and mobile'
-		],
-		image: '/brisklogo.jpg' // Replace with your actual logo image path
-	};
 
 	const otherServices = {
 		title: 'OTHER SERVICES',
@@ -116,7 +105,7 @@
 	};
 </script>
 
-<div class="bg-primary relative -mt-24 w-full px-12 py-12">
+<div class="bg-primary relative h-screen w-full px-12 py-12">
 	<div class="relative z-10 py-24 text-center md:py-48">
 		<h1 class="font-display mb-12 text-center text-3xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
 			{home.title}
@@ -134,23 +123,7 @@
 		<a href={home.link_two} class="border-b border-white">{home.link_two_text}</a>
 	</div>
 
-	<img src={home.image} class="absolute inset-0 h-full w-full object-cover opacity-70" alt="Hero background" />
-</div>
-<!-- About Section -->
-<div class="container mx-auto px-4 py-16 md:py-24">
-	<div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-		<div class="order-2 md:order-1">
-			<div class="border-primary mb-2 inline-block w-24 border-b-3 tracking-wider text-gray-500 uppercase">{about.subtitle}</div>
-			<h2 class=" mb-8 text-3xl font-bold text-gray-800 md:text-4xl lg:text-5xl">{about.title}</h2>
-
-			{#each about.description as paragraph}
-				<p class="mb-6 text-justify text-xl leading-relaxed text-gray-700">{paragraph}</p>
-			{/each}
-		</div>
-		<div class="order-1 flex justify-center md:order-2">
-			<img src={about.image} alt="Brisk Solutions Logo" class="w-full max-w-md" />
-		</div>
-	</div>
+	<img src={home.image} class="absolute inset-0 h-full w-full object-cover opacity-60" alt="Hero background" />
 </div>
 
 <!-- Services Section Header -->
@@ -256,7 +229,7 @@
 	</div>
 </div>
 
-{#if home.full_screen_image}
+<!-- {#if home.full_screen_image}
 	<img src={home.full_screen_image} class="h-screen w-full object-cover" alt="Full screen showcase" />
 {/if}
 
@@ -266,7 +239,7 @@
 		<h2 class="font-display mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">{home.cta_title}</h2>
 		<p class="mb-6 leading-relaxed font-light text-gray-600">{home.cta_description}</p>
 	</div>
-{/if}
+{/if} -->
 
 <div class="flex flex-wrap bg-black">
 	{#each categories.slice(0, 3) as category}
@@ -310,7 +283,7 @@
 {#if home.footer_cta_image}
 	<div class="relative w-full px-12 py-12">
 		<div class="relative z-10 py-12 text-center md:py-24">
-			<h1 class="font-display mb-6 text-center text-3xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
+			<h1 class="font-display mb-6 text-center text-3xl font-bold tracking-tighter text-white md:text-4xl lg:text-5xl xl:text-6xl">
 				{home.footer_cta_title}
 			</h1>
 			<p class="mb-10 text-base font-bold text-white md:text-lg">{home.footer_cta_description}</p>
@@ -324,3 +297,38 @@
 		<img src={home.footer_cta_image} class="absolute inset-0 h-full w-full object-cover" alt="Footer CTA background" />
 	</div>
 {/if}
+
+<!-- Where to Find Us - Map Section -->
+<div class="bg-gray-50 py-16 md:py-24">
+	<div class="container mx-auto px-4">
+		<div class="mb-12 text-center">
+			<h2 class="text-3xl font-bold text-gray-800 md:text-4xl">Where to Find Us</h2>
+			<p class="mt-2 text-gray-600">Visit our location at La Foret Conference Centre.</p>
+		</div>
+		<div class="relative h-96 w-full overflow-hidden rounded-lg shadow-xl md:h-[500px]">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.851757999198!2d36.80280867496561!3d-1.265014498728368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1741713610c1%3A0x50a21b4b1a3979a8!2sLa%20Foret%20Conference%20Centre!5e0!3m2!1sen!2ske!4v1714901000000!5m2!1sen!2ske"
+				width="100%"
+				height="100%"
+				style="border:0;"
+				allowfullscreen
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+				title="La Foret Conference Centre Location"
+			></iframe>
+		</div>
+	</div>
+</div>
+
+<!-- About Section CTA -->
+<div class="container mx-auto px-4 py-16 md:py-24">
+	<div class="text-center">
+		<h2 class="mb-6 text-3xl font-bold text-gray-800 md:text-4xl lg:text-5xl">Learn More About Us</h2>
+		<p class="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
+			Discover our story, mission, vision, and the values that drive us to deliver exceptional software solutions.
+		</p>
+		<a href="/about" class="bg-primary hover:bg-primary/90 inline-block rounded px-8 py-4 font-medium text-white transition-all">
+			Visit Our About Page
+		</a>
+	</div>
+</div>
